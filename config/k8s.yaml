@@ -86,11 +86,13 @@ kind: Ingress
 metadata:
   name: burgerfront
   namespace: burgers
+  annotations:
+    kubernetes.io/ingress.class: nginx
   labels:
     name: burgerfront
   annotations:
 spec:
-  ingressClassName: ngrok
+  ingressClassName: nginx
   rules:
   - host: FRONTEND_URL
     http:
