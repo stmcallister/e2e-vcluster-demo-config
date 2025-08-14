@@ -17,11 +17,11 @@ spec:
     metadata:
       labels:
         app: burgerback
-        version: IMAGE_LABEL
+        version: 1053df9f627c16135278714f5c5bf25515da0094
     spec:
       containers:
       - name: burgerback
-        image: DOCKER_URL/burger-back:IMAGE_LABEL
+        image: scottloft/burger-back:1053df9f627c16135278714f5c5bf25515da0094
         resources: 
           requests:
             memory: "100Mi"
@@ -44,11 +44,11 @@ spec:
     metadata:
       labels:
         app: burgerfront
-        version: IMAGE_LABEL
+        version: 1053df9f627c16135278714f5c5bf25515da0094
     spec:
       containers:
       - name: burgerfront
-        image: DOCKER_URL/burger-front:IMAGE_LABEL
+        image: scottloft/burger-front:1053df9f627c16135278714f5c5bf25515da0094
         ports:
         - containerPort: 3000
         env:
@@ -94,7 +94,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: FRONTEND_URL
+  - host: pr12.vclusterbox.com
     http:
       paths:
       - pathType: Prefix
