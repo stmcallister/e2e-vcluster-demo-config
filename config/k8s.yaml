@@ -94,7 +94,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: pr12.vclusterbox.com
+  - host: burgerplaces.vclusterbox.com
     http:
       paths:
       - pathType: Prefix
